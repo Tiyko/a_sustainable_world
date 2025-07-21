@@ -29,6 +29,16 @@ a {
 }
 
 
+/* Piotr - this seems like a nice green colour for the navbar, and a whiter green for the back, fits into the sustainibility I'd say */
+.bg-light-green {
+    background-color: #6DBE45; 
+}
+
+body {
+    background-color: #F5FFF5; 
+}
+
+
 
 
 
