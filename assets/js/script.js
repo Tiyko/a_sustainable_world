@@ -34,8 +34,51 @@ function randomizeImages() {
 // Call the function
 randomizeImages();
 
-// Refresh every 1 seconds (3000 milliseconds)
+// Refresh every 1 seconds
 setInterval(randomizeImages, 1000);
+
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      document.querySelectorAll(".error").forEach(el => el.textContent = "");
+
+      let isValid = true;
+
+      // Name validation
+      const name = document.getElementById("name").value.trim();
+      if (name === "") {
+        document.getElementById("nameError").textContent = "Name is required.";
+        isValid = false;
+      }
+
+      // Email validation
+      const email = document.getElementById("email").value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        document.getElementById("emailError").textContent = "Enter a valid email.";
+        isValid = false;
+      }
+
+      // Phone validation (basic pattern)
+      const phone = document.getElementById("phone").value.trim();
+      const phonePattern = /^\+?\d{10,15}$/;
+      if (!phonePattern.test(phone)) {
+        document.getElementById("phoneError").textContent = "Enter a valid phone number (10-15 digits).";
+        isValid = false;
+      }
+
+      // Age validation
+      const age = parseInt(document.getElementById("age").value);
+      if (isNaN(age) || age < 18 || age > 100) {
+        document.getElementById("ageError").textContent = "Age must be between 18 and 100.";
+        isValid = false;
+      }
+
+      if (isValid) {
+        alert("Thank you for subscribing!\nKeep in touch!");
+      }
+    });
 
 /*
     IONUT - end

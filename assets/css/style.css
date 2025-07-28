@@ -34,10 +34,34 @@ a {
 .landing-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10rem;
+    gap: 5rem;
+}
+
+.randomiseImgs {
+    width: 769px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 /* IONUT - end */
 
+/* IONUT - About Us Page settings*/
+.aboutUsForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+.inputFormAboutUs {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+}
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+/* IONUT - end */
 
 /* Piotr - this seems like a nice green colour for the navbar, and a whiter green for the back, fits into the sustainibility I'd say */
 .bg-light-green {
@@ -58,20 +82,24 @@ body {
     .landing-content {
         grid-template-columns: 1fr;
         gap: 2rem;
-        margin-left: 2rem;
-        margin-right: 2rem;
+        justify-items: center;
     } 
+
+    .randomiseImgs {
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .aboutUsForm{
+        display: flex;
+        flex-direction: column;
+}
 
     .footer{
         flex-direction: column;
         align-items: center;
-    }
-
-    .bg-image {
-        background-image: url("");
-    }
-    .gmap_canvas {
-        width: 90vw;
     }
 
 /* IONUT - end */

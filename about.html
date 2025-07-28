@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
+    <!-- About Us page - by IONUT -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,9 +91,43 @@
 
 
     <!-- Main content area -->
-    <div class="container content">
-        <h1>Welcome to About Page</h1>
-        <p>This is the main content of the page.</p>
+    <div class="container content mt-5">
+
+        <h1>About Us</h1>
+        <p>We are committed to promoting sustainable energy solutions and a greener future. Our team is dedicated to providing resources and information on solar power, wind energy, and electric vehicles.</p>
+        <h2>Contact Us</h2>
+        <p>Complete the form below to get in contact. Also by doing so a newsletter will be emailed to you on a monthly basis.</p>
+        
+
+        <form class="aboutUsForm" id="contactForm" novalidate>
+            <label>
+                Name:
+                <input class="inputFormAboutUs" type="text" id="name" name="name">
+                <span class="error" id="nameError"></span>
+            </label>
+
+            <label>
+                Email:
+                <input class="inputFormAboutUs" type="email" id="email" name="email">
+                <span class="error" id="emailError"></span>
+            </label>
+
+            <label>
+                Phone Number:
+                <input class="inputFormAboutUs" type="tel" id="phone" name="phone">
+                <span class="error" id="phoneError"></span>
+            </label>
+
+            <label>
+                Age:
+                <input class="inputFormAboutUs" type="number" min="18" id="age" name="age">
+                <span class="error" id="ageError"></span>
+            </label>
+            <div class="d-flex align-items-center justify-content-center">
+                <button type="submit">Subscribe</button>
+            </div>
+            
+        </form>
     </div>
 
 
