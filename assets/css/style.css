@@ -1,4 +1,4 @@
-/* Global Settings */
+/* Ionut - Global Settings */
 * {
     margin: 0;
     padding: 0;
@@ -29,6 +29,13 @@ a {
 }
 
 
+/* Ionut - Landing Page settings*/
+.landing-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10rem;
+}
+
 /* Piotr - this seems like a nice green colour for the navbar, and a whiter green for the back, fits into the sustainibility I'd say */
 .bg-light-green {
     background-color: #6DBE45; 
@@ -42,7 +49,7 @@ body {
 
 
 
-/* Small Screens Settings */
+/* Ionut - Small Screens Settings */
  @media (max-width: 768px) {
 
     .footer{
