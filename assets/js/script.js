@@ -5,16 +5,15 @@
  */
 let itemsInHtml = document.getElementsByClassName('randomiseImgs');
 
-let images = [
-    './assets/img/solar1.jpg',
-    './assets/img/solar2.jpg',
-    './assets/img/solar3.jpg',
-    './assets/img/windmill1.jpg',
-    './assets/img/windmill2.jpg',
-    './assets/img/windmill3.jpg',
-    './assets/img/ev1.jpg',
-    './assets/img/ev2.jpg',
-    './assets/img/ev3.jpg',]
+let images = [  './assets/img/solar1.jpg',
+                './assets/img/solar2.jpg',
+                './assets/img/solar3.jpg',
+                './assets/img/windmill1.jpg',
+                './assets/img/windmill2.jpg',
+                './assets/img/windmill3.jpg',
+                './assets/img/ev1.jpg',
+                './assets/img/ev2.jpg',
+                './assets/img/ev3.jpg',]
 
 function randomizeImages() {
   // Shuffle the images array using Fisher-Yates algorithm
