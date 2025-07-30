@@ -77,8 +77,11 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
       if (isValid) {
         alert("Thank you for subscribing!\nKeep in touch!");
+        // Clear the form fields
+        document.getElementById("contactForm").reset();
       }
     });
+
 
 /*
     IONUT - end
