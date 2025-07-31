@@ -38,51 +38,53 @@ randomizeImages();
 setInterval(randomizeImages, 1000);
 
 
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-      event.preventDefault();
+const form = document.getElementById("contactForm");
 
-      document.querySelectorAll(".error").forEach(el => el.textContent = "");
+if (form) {
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
 
-      let isValid = true;
+    document.querySelectorAll(".error").forEach(el => el.textContent = "");
 
-      // Name validation
-      const name = document.getElementById("name").value.trim();
-      if (name === "") {
-        document.getElementById("nameError").textContent = "Name is required.";
-        isValid = false;
-      }
+    let isValid = true;
 
-      // Email validation
-      const email = document.getElementById("email").value.trim();
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailPattern.test(email)) {
-        document.getElementById("emailError").textContent = "Enter a valid email.";
-        isValid = false;
-      }
+    // Name validation
+    const name = document.getElementById("name").value.trim();
+    if (name === "") {
+      document.getElementById("nameError").textContent = "Name is required.";
+      isValid = false;
+    }
 
-      // Phone validation (basic pattern)
-      const phone = document.getElementById("phone").value.trim();
-      const phonePattern = /^\+?\d{10,15}$/;
-      if (!phonePattern.test(phone)) {
-        document.getElementById("phoneError").textContent = "Enter a valid phone number (10-15 digits).";
-        isValid = false;
-      }
+    // Email validation
+    const email = document.getElementById("email").value.trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      document.getElementById("emailError").textContent = "Enter a valid email.";
+      isValid = false;
+    }
 
-      // Age validation
-      const age = parseInt(document.getElementById("age").value);
-      if (isNaN(age) || age < 18 || age > 100) {
-        document.getElementById("ageError").textContent = "Age must be between 18 and 100.";
-        isValid = false;
-      }
+    // Phone validation (basic pattern)
+    const phone = document.getElementById("phone").value.trim();
+    const phonePattern = /^\+?\d{10,15}$/;
+    if (!phonePattern.test(phone)) {
+      document.getElementById("phoneError").textContent = "Enter a valid phone number (10-15 digits).";
+      isValid = false;
+    }
 
-      if (isValid) {
-        alert("Thank you for subscribing!\nKeep in touch!");
-        // Clear the form fields
-        document.getElementById("contactForm").reset();
-      }
-    });
+    // Age validation
+    const age = parseInt(document.getElementById("age").value);
+    if (isNaN(age) || age < 18 || age > 100) {
+      document.getElementById("ageError").textContent = "Age must be between 18 and 100.";
+      isValid = false;
+    }
 
-
+    if (isValid) {
+      alert("Thank you for subscribing!\nKeep in touch!");
+      // Clear the form fields
+      form.reset();
+    }
+  });
+}
 /*
     IONUT - end
  */
