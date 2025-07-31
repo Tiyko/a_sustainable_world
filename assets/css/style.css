@@ -109,34 +109,3 @@ body {
 
 /* IONUT - end */
 }
-/* === Begin: Jamie Hill - Electric Vehicles Page === */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-.grid img {
-  width: 100%;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-form input {
-  padding: 5px;
-  margin: 5px 0;
-  width: 100%;
-}
-
-form button {
-  background-color: green;
-  color: white;
-  padding: 8px;
-  border: none;
-  border-radius: 5px;
-}
-
-form button:hover {
-  background-color: darkgreen;
-}
-/* === End: Jamie Hill */
