@@ -1,0 +1,50 @@
+<!-- electric-vehicles.html -->
+<!-- Author: Jamie Hill - Electric Vehicles Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electric Vehicles</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="electric-vehicles.html">Electric Vehicles</a>
+      <!-- Add links to other group pages -->
+    </nav>
+  </header>
+
+  <main>
+    <h1>Electric Vehicles & Climate Action</h1>
+    <p>Electric vehicles (EVs) are key to reducing carbon emissions and creating a sustainable future.</p>
+
+    <!-- 📸 IMAGE GRID -->
+    <section>
+      <h2>Popular EVs</h2>
+      <div class="grid">
+        <img src="images/ev1.jpg" alt="EV 1">
+        <img src="images/ev2.jpg" alt="EV 2">
+        <img src="images/ev3.jpg" alt="EV 3">
+        <img src="images/ev4.jpg" alt="EV 4">
+      </div>
+    </section>
+
+    <!-- 📝 FORM -->
+    <section>
+      <h2>Interested in Electric Vehicles?</h2>
+      <form id="evForm">
+        <label>Name: <input type="text" id="name" /></label><br>
+        <label>Email: <input type="email" id="email" /></label><br>
+        <label>Age: <input type="number" id="age" /></label><br>
+        <label>Favourite EV brand: <input type="text" id="brand" /></label><br>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="formMessage"></p>
+    </section>
+  </main>
+</body>
+</html>
