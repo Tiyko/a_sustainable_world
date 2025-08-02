@@ -1,121 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- wind page - by SHANE -->
+ 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- This link adds Bootstrap CSS so the site looks nice without writing loads of CSS by hand -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
+  <!-- Bootstrap Javascript so the navbar work -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
 
+  <!-- My own CSS file for custom styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
 
-     <!-- Bootstrap CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-     <!-- Bootstrap JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-
-    <title>A Sustainable World - Wind Power</title>
+  <title>A Sustainable World - Wind Power</title>
 </head>
+
 <body class="pt-5 mt-2">
-    
-    <!-- Navigation area -->
-    <header>
-       <nav class="navbar navbar-dark bg-wind-blue fixed-top" aria-label="Wind offcanvas navbar">
-            <div class="container-fluid">
-                <a class="navbar-brand text-warning" href="index.html">A Sustainable World</a>
 
-                <!-- Large screen navigation -->
-                <div class="d-none d-lg-block">
-                    <ul class="d-inline-flex mb-0">
-                        <li class="nav-item me-3">
-                            <a class="nav-link btn btn-outline-primary p-2 text-white" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link btn btn-outline-primary p-2 text-white" href="solar.html">Solar Power</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link btn btn-outline-primary p-2 text-white" href="wind.html">Wind Power</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link btn btn-outline-primary p-2 text-white" href="ev.html">Electric Vehicles</a>
-                        </li>
-                        <li class="nav-item me-5">
-                            <a class="nav-link btn btn-outline-primary p-2 text-white" href="about.html">About Us</a>
-                        </li>
-                    </ul>
-                </div>
+  <!-- Navigation bar at the top -->
+  <header>
+    <nav class="navbar navbar-dark bg-wind-blue fixed-top" aria-label="Wind offcanvas navbar">
+      <div class="container-fluid">
+        <!-- Website name -->
+        <a class="navbar-brand text-warning" href="index.html">A Sustainable World</a>
 
-                <!-- Small screen navigation -->
-                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" aria-label="Navigation Button"
-                    data-bs-target="#offcanvasNavbarDark"
-                    aria-controls="offcanvasNavbarDark">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbarDark"
-                    aria-labelledby="offcanvasNavbarDarkLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarDarkLabel">A Sustainable World</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="solar.html">Solar Power</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="wind.html">Wind Power</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="ev.html">Electric Vehicles</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav> 
-    </header>
+        <!-- Big screen nav menu (hidden on mobile) -->
+        <div class="d-none d-lg-block">
+          <ul class="d-inline-flex mb-0">
+            <!-- Buttons for different pages -->
+            <li class="nav-item me-3">
+              <a class="nav-link btn btn-outline-primary p-2 text-white" href="index.html">Home</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link btn btn-outline-primary p-2 text-white" href="solar.html">Solar Power</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link btn btn-outline-primary p-2 text-white" href="wind.html">Wind Power</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link btn btn-outline-primary p-2 text-white" href="ev.html">Electric Vehicles</a>
+            </li>
+            <li class="nav-item me-5">
+              <a class="nav-link btn btn-outline-primary p-2 text-white" href="about.html">About Us</a>
+            </li>
+          </ul>
+        </div>
 
-    <!-- Main content area -->
-    <div class="container content">
-        <h1>Welcome to Wind Power Page</h1>
-        <p>This is the main content of the page.</p>
-    </div>
+        <!-- Mobile button to open the menu -->
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+          aria-label="Navigation Button" data-bs-target="#offcanvasNavbarDark"
+          aria-controls="offcanvasNavbarDark">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-
-    <div class="container py-3">
-        <footer class="footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
-            <p class="col-md-4 mb-0 text-muted">© 2025 A Sustainable World</p>
-            <a href="/" aria-label="Home Link" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                <svg class="fa me-2" width="40" height="32">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-            </a>
-            <ul class="nav col-md-4 justify-content-end">
-                <li class="nav-item">
-                    <a href="https://www.facebook.com/" class="nav-link px-2 text-muted" target="”_blank”"><i class="fa-brands fa-facebook"></i> Facebook</a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://www.instagram.com/" class="nav-link px-2 text-muted" target="”_blank”"><i class="fa-brands fa-square-instagram"></i> Instagram</a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://twitter.com/" class="nav-link px-2 text-muted" target="”_blank”"><i class="fa-brands fa-twitter"></i> Twitter</a>
-                </li>
+        <!-- Side menu for smaller screens -->
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbarDark">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">A Sustainable World</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <!-- Same links as the big nav but stacked for mobile -->
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="solar.html">Solar Power</a></li>
+              <li class="nav-item"><a class="nav-link" href="wind.html">Wind Power</a></li>
+              <li class="nav-item"><a class="nav-link" href="ev.html">Electric Vehicles</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
             </ul>
-        </footer>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main first section with text and a big image -->
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <!-- Photo of a wind turbine -->
+      <img src="assets/img/windmill4.jpg" alt="Wind turbine image" class="img-fluid rounded mt-4 ms-3">
     </div>
+    <div class="col-md-6">
+      <h2 class="text-primary mb-3">Wind Power and Sustainability</h2>
+      <p>
+        Wind power turns the energy from wind into electricty (no fuel needed!).
+        Once a turbine is built it doesnt cost much to run and makes no air polution.
+      </p>
+      <p>
+        Its a big part of the move away from fossil fuels and helping the enviroment.
+      </p>
+      <h3 class="text-success mt-4 mb-3">Benefits of Wind Energy</h3>
+      <!-- List of benefits -->
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">✅ Reduces greenhouse gas emissions</li>
+        <li class="list-group-item">🌿 No air or water polution</li>
+        <li class="list-group-item">🔄 Renewable forever (as long as theres wind!)</li>
+        <li class="list-group-item">👷‍♂️ Creates jobs for people</li>
+      </ul>
+    </div>
+  </div>
 
-    <script src="assets/js/script.js"></script>
+  <hr class="my-4">
 
+  <!-- Random fact box - this is updated by the JS file -->
+  <div class="container my-5">
+    <div id="factCard" class="card bg-light border-info shadow-sm" style="max-width:500px;margin:auto;">
+      <div class="card-body">
+        <h4 class="card-title text-info">🌍 Random Fact of the Day</h4>
+        <p id="factText" class="card-text fst-italic">Loading fact...</p>
+        <button id="refreshFact" class="btn btn-sm btn-outline-info mt-2">New Fact</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Some example wind energy photos -->
+  <h2 class="text-info mt-5 text-center">Wind Energy Around the World</h2>
+  <div class="container my-4">
+    <div class="row g-3">
+      <div class="col-sm-6 col-md-3"><img src="assets/img/windmill4.jpg" alt="Windmill at sunrise" class="img-fluid rounded shadow"></div>
+      <div class="col-sm-6 col-md-3"><img src="assets/img/windmill5.jpg" alt="Windmill on a green field" class="img-fluid rounded shadow"></div>
+      <div class="col-sm-6 col-md-3"><img src="assets/img/windmill6.jpg" alt="Offshore windmills" class="img-fluid rounded shadow"></div>
+      <div class="col-sm-6 col-md-3"><img src="assets/img/windmill7.jpg" alt="Sunset windmill silhouette" class="img-fluid rounded shadow"></div>
+    </div>
+  </div>
+
+  <!-- Calculator section where people can check savings -->
+  <div class="container my-5">
+    <h2 class="text-center">Wind Turbine Savings Calculator</h2>
+    <!-- Form for the calculator -->
+    <form id="windForm" class="my-4" style="max-width:400px;margin:auto;">
+      <label>Average monthly electricity bill (€):
+        <input type="number" id="bill" min="1" class="form-control">
+        <span class="error" id="billError"></span>
+      </label><br>
+      <label>Number of people in your home:
+        <input type="number" id="people" min="1" class="form-control">
+        <span class="error" id="peopleError"></span>
+      </label><br>
+      <label>Average wind speed at your location (m/s):
+        <input type="number" id="wind" min="1" step="0.1" class="form-control">
+        <span class="error" id="windError"></span>
+      </label><br>
+      <label>Size of your garden/land (square meters):
+        <input type="number" id="land" min="1" class="form-control">
+        <span class="error" id="landError"></span>
+      </label><br>
+      <button type="submit" class="btn btn-primary">Estimate Savings</button>
+    </form>
+    <!-- Where the savings result is shown -->
+    <div id="result" class="result text-center"></div>
+  </div>
+
+  <!-- Footer with copyright and social media -->
+  <div class="container py-3">
+    <footer class="footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+      <p class="col-md-4 mb-0 text-muted">© 2025 A Sustainable World</p>
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="https://www.facebook.com/" class="nav-link px-2 text-muted" target="_blank">Facebook</a></li>
+        <li class="nav-item"><a href="https://www.instagram.com/" class="nav-link px-2 text-muted" target="_blank">Instagram</a></li>
+        <li class="nav-item"><a href="https://twitter.com/" class="nav-link px-2 text-muted" target="_blank">Twitter</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <!-- Shared JavaScript file -->
+  <script src="assets/js/script.js"></script>
 </body>
+
 </html>
