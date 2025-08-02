@@ -97,6 +97,36 @@
 		<a href="https://engineerine.com/china-space-solar-power/">China's space solar power project</a>
 		
     </div>
+	<section class="container my-5">
+  <h2 class="text-center mb-4">Solar Innovation Suggestions</h2>
+  <form id="solarIdeaForm">
+   
+   <!-- User email address box-->
+	<div class="mb-3">
+      <label for="solarEmail" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="solarEmail">
+      <div class="invalid-feedback">Please enter a valid email</div>
+    </div>
+    
+    <!-- User's idea tittle -->
+    <div class="mb-3">
+      <label for="solarSuggest" class="form-label">Idea suggestion</label>
+      <input type="text" class="form-control" id="ideaTitle">
+      <div class="invalid-feedback">Please give your idea a title</div>
+    </div>
+    
+    <!-- Description -->
+    <div class="mb-3">
+      <label for="solarDescription" class="form-label">Description</label>
+      <textarea class="form-control" id="ideaDescription" rows="4"></textarea>
+    </div>
+    
+    <button type="submit" style="background-color: green; color: white;">Submit</button>
+  </form>
+  
+  <!-- Randomized response will appear here -->
+  <div id="solarResponse" class="mt-3 text-success fw-bold" style="display:none;"></div>
+</section>
 	<a href="solar.html">Back to page 1</a>
 
 

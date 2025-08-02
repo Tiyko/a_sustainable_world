@@ -206,3 +206,92 @@ document.getElementById("windForm").addEventListener("submit", function(event) {
     "Estimated annual savings with a wind turbine: €" + savings.toFixed(2);
 });
 // Shane End
+
+
+/*
+PIOTR - Solar Suggestion Form Handler for A Sustainable World
+This script should handle form validation and then display a random thank you message from an array of messages available.
+ */
+
+// the form handler
+document.getElementById("solarIdeaForm").addEventListener("submit", function(event) {
+  // Prevent from resetting after the submission
+  event.preventDefault();
+
+  // assign a function to const so that it can be used in a boolean operation
+  const valid = validateForm();
+
+// validate
+  if (valid) {
+    displayRandomThankYou();
+  }
+});
+
+
+/* Validates the solar suggestion form
+should return true if the form is valid and false if it isn't
+*/
+function validateForm() {
+  let valid = true;
+  const form = document.getElementById("solarIdeaForm");
+
+  // Email validation
+  document.getElementById("solarIdeaForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  if (validateForm()) {
+    displayRandomThankYou();
+  }
+});
+  
+  const email = document.getElementById("solarEmail").value;
+  const emailParts = email.split('@');
+  
+ /* email validation will fail-
+ if the email doesnt have 2 parts (one of each side of the @)
+ or if the email is empty before @
+ or if the email doesnt have dot after @
+ or if there's no text after the dot  
+ */
+  if (emailParts.length !== 2 || emailParts[0].length < 1 || !emailParts[1].includes('.') || emailParts[1].split('.')[1].length < 1) {
+    document.getElementById("emailError").textContent = "Enter a valid email (like name@example.com)";
+    return;
+  }
+  
+  // If it is valid
+  displayRandomThankYou();
+});
+
+  // Idea title validation
+  const ideaTitle = document.getElementById("ideaTitle").value.trim();
+  if (ideaTitle.length < 1) {
+    document.getElementById("titleError").textContent = "Please a proper title for your idea.";
+     valid = false;
+  }
+
+  // Description validation
+  const description = document.getElementById("ideaDescription").value.trim();
+  if (description.length < 10) {
+    document.getElementById("descriptionError").textContent = "Please provide more detail about your idea (at least 10 characters!).";
+    valid = false;
+  }
+
+  // Show validation errors if any
+  if (!valid) {
+    form.classList.add("was-validated");
+  }
+
+  return valid;
+}
+
+/*
+Displays a random feedback message
+ */
+function displayRandomThankYou() {
+  const thankYouMessages = [
+    "Thank you for brightening our solar future with your idea!",
+    "Your innovative suggestion will help harness the sun's power!",
+    "We're shining a light on great ideas like yours!",
+    "Solar innovators like you make the world greener!",
+    "Your idea has been received - let's power the future together!"
+  ];
